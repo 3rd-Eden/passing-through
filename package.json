@@ -1,0 +1,60 @@
+{
+  "name": "passing-through",
+  "version": "1.0.0",
+  "description": "Pass properties and modifier functions to child context's which can modify children",
+  "react-native": "index.js",
+  "main": "lib",
+  "scripts": {
+    "build": "rm -rf ./lib && babel ./index.js -d ./lib",
+    "prepublishOnly": "npm run build",
+    "test:runner": "mocha --require setup-env test.js",
+    "test": "nyc --reporter=text --reporter=json-summary npm run test:runner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3rd-Eden/passing-through.git"
+  },
+  "keywords": [
+    "pass",
+    "through",
+    "passed",
+    "through",
+    "react",
+    "context",
+    "modify",
+    "child",
+    "props"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3rd-Eden/passing-through/issues"
+  },
+  "homepage": "https://github.com/3rd-Eden/passing-through#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "assume": "^2.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "setup-env": "^1.2.2"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  }
+}
